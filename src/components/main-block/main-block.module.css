@@ -1,0 +1,14 @@
+* {
+    box-sizing: border-box;
+}
+
+.main_container {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+}
+
+.info_block {
+    width: 600px;
+    height: 912px;
+}
