@@ -1,10 +1,30 @@
 .container {
     display: flex;
     flex-direction: column;
+    height: 912px;
 }
+
+.ingredientlist {
+    overflow: scroll;
+    overflow-x: hidden;
+}
+
 
 .cards {
     display: flex;
-    width: 600px;
-    flex-flow: column wrap;
+    width: 576px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.ingredientlist::-webkit-scrollbar {
+    width: 8px;
+}
+
+.ingredientlist::-webkit-scrollbar-track {
+    background: #2F2F37;
+}
+
+.ingredientlist::-webkit-scrollbar-thumb {
+    background: #8585AD;
 }

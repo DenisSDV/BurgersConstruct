@@ -1,29 +1,44 @@
 import React from 'react';
 import ingredientStyles from './burger-ingredients.module.css';
 import { Tab } from '@ya.praktikum/react-developer-burger-ui-components'
+import data from '../../utils/data'
+import IngredientCard from '../ingredient-card/ingredient-card';
+
 
 /* Карточки ингредиентов - контейнер, выводящий набор карточек
             в зависимости от типа ингредиентов */
 const IngredientCards = (props) => {
-    return (<div className={ingredientStyles.cards}>
+    return (<div className={`${ingredientStyles.cards} ml-4 mr-2`}>
+        {
+            data.map((ingredient) => (
+                (ingredient.type === props.listType) ?
+                    <IngredientCard
+                        key={ingredient._id}
+                        name={ingredient.name}
+                        price={ingredient.price}
+                        image={ingredient.image_large} /> : ""
+            )
+            )
+        }
 
     </div>)
 }
 
 const IngredientsList = (props) => {
-    return (<nav className='menu'>
+    return (<div className={ingredientStyles.ingredientlist}>
         {props.children}
-    </nav>
+    </div>
     )
 }
 
+// Блок отображающий набор конкретных ингридиентов
 const Ingredients = (props) => {
     return (
-        <div listType={props.type} className="mt-10">
+        <div className="mt-10">
             <p className='text text_type_main-medium'>{props.text}</p>
             {/* Карточки ингредиентов - контейнер, выводящий набор карточек
             в зависимости от типа ингредиентов */}
-            <IngredientCards />
+            <IngredientCards listType={props.type} />
         </div>
     )
 }
