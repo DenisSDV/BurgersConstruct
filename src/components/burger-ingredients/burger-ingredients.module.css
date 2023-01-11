@@ -10,13 +10,6 @@
 }
 
 
-.cards {
-    display: flex;
-    width: 576px;
-    flex-wrap: wrap;
-    justify-content: space-between;
-}
-
 .ingredientlist::-webkit-scrollbar {
     width: 8px;
 }
@@ -27,4 +20,8 @@
 
 .ingredientlist::-webkit-scrollbar-thumb {
     background: #8585AD;
+}
+
+.tabs {
+    display: flex;
 }
