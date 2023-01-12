@@ -1,0 +1,38 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    height: 912px;
+    width: 600px;
+}
+
+.card {
+    display: flex;
+    align-items: center;
+}
+
+.bun {
+    display: flex;
+    align-items: center;
+    background: #1C1C21;
+}
+
+.buntop {
+    composes: bun;
+    border-radius: 88px 88px 40px 40px;
+}
+
+.bunbottom {
+    composes: bun;
+    border-radius: 40px 40px 88px 88px;
+}
+
+.ingredient {
+    composes: bun;
+    justify-content: space-around;
+    border-radius: 40px;
+}
+
+.image {
+    width: 80px;
+    height: 40px;
+}
