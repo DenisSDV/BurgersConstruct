@@ -35,21 +35,5 @@ BcIngredient.propTypes = {
 };
 
 
-/*
-            <div className={style.ingredient}>
-                <img src={image} alt="" className={`${style.image} ml-6  mr-5`} />
-                <p className={`${style.name} text text_type_main-default`}>{name}</p>
-
-                <p className="ml-5 mr-2 text text_type_digits-default">{price}</p>
-
-                <div className='mr-5'>
-                    <CurrencyIcon type="primary" />
-                </div>
-                <div className="mr-8" >
-                    <DeleteIcon type="primary" />
-                </div>
-            </div>
-
-*/
 
 export default BcIngredient
